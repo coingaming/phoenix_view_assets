@@ -9,7 +9,7 @@ Add `phoenix_view_assets` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:phoenix_view_assets, "~> 0.1.0"}
+    {:phoenix_view_assets, "~> 0.1"}
   ]
 end
 ```
@@ -18,9 +18,9 @@ Use (or merge) `example_assets` for `assets/` in your project.
 
 ## Setup
 
-1. Create module `MyApp.Assets`:
+1. Create module `MyAppWeb.Assets`:
 ```elixir
-defmodule MyApp.Assets do
+defmodule MyAppWeb.Assets do
   use PhoenixViewAssets
 end
 ```
