@@ -18,7 +18,7 @@ Use (or merge) `example_assets` for `assets/` in your project.
 
 ## Setup
 
-1. Create module `MyApp.Assets`:
+1. Create module `MyAppWeb.Assets`:
 ```elixir
 defmodule MyAppWeb.Assets do
   use PhoenixViewAssets
