@@ -1,6 +1,6 @@
 # PhoenixViewAssets
 
-Helps to manage view specific assets in phoenix project. Uses automatic code splitting to avoid over-fetching or downloading assets twice, if they are used in multiple views.
+Helps to manage view specific assets in phoenix project. Uses automatic code splitting to avoid over-fetching or downloading assets twice, if they are used in multiple views. Also supports phoenix live reload.
 
 ## Installation
 

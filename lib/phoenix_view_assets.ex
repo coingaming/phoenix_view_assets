@@ -66,7 +66,7 @@ defmodule PhoenixViewAssets do
         Returns true whenever the assets manifest changes in the filesystem.
         """
         def __phoenix_recompile__? do
-          unquote(manifest_hash()) != manifest_hash()
+          unquote(manifest_hash()) != unquote(__MODULE__).manifest_hash()
         end
       end
 
