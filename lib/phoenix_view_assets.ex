@@ -86,9 +86,9 @@ defmodule PhoenixViewAssets do
       |> Jason.decode!()
 
     view_assets = get_assets(views, manifest)
-    default_css = Map.get(manifest, "default.css")
-    default_js = Map.get(manifest, "default.js")
-    {view_assets, [default_css], [default_js]}
+    default_styles = manifest_assets(manifest, ".css", "default")
+    default_scripts = manifest_assets(manifest, ".js", "default")
+    {view_assets, default_styles, default_scripts}
   end
 
   defp read_manifest do
