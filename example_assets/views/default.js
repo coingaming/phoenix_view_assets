@@ -1,3 +1,5 @@
+// entrypoint for all views that does not have custom entrypoint
+
 import "../app"
 
-// js for all views that does not have custom js
+// code for all views without custom entrypoints
