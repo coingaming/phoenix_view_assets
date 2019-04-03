@@ -20,7 +20,7 @@ Use (or merge) `example_assets` for `assets/` in your project.
 
 1. Create module `MyApp.Assets`:
 ```elixir
-defmodule MyApp.Assets do
+defmodule MyAppWeb.Assets do
   use PhoenixViewAssets
 end
 ```
