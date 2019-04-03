@@ -1,20 +1,13 @@
-defmodule PhoenixCodeSplitting do
+defmodule PhoenixViewAssets do
+  @doc false
 
   @manifest_file "priv/manifest.json"
   @views_path "assets/views"
 
-  @doc false
   defmacro __using__(_opts) do
     app_module = __CALLER__.module
 
-    {app_view_assets, app_default_styles, app_default_scripts} =
-      case app_module do
-        PhoenixCodeSplitting.DefaultAssets ->
-          {[], [], []}
-
-        _ ->
-          get_assets(app_module)
-      end
+    {app_view_assets, app_default_styles, app_default_scripts} = get_assets(app_module)
 
     head_ast =
       quote do
@@ -93,7 +86,9 @@ defmodule PhoenixCodeSplitting do
       |> Jason.decode!()
 
     view_assets = get_assets(views, manifest)
-    {view_assets, [Map.get(manifest, "default.css")], [Map.get(manifest, "default.js")]}
+    default_css = Map.get(manifest, "default.css")
+    default_js = Map.get(manifest, "default.js")
+    {view_assets, [default_css], [default_js]}
   end
 
   defp read_manifest do
@@ -102,6 +97,7 @@ defmodule PhoenixCodeSplitting do
     |> case do
       {:ok, body} ->
         body
+
       {:error, _} ->
         IO.warn("Asset manifest file (#{@manifest_file}) not found. Build assets first.")
         "{}"

@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :phoenix_code_splitting, key: :value
+#     config :phoenix_view_assets, key: :value
 #
 # and access this configuration in your application as:
 #
-#     Application.get_env(:phoenix_code_splitting, :key)
+#     Application.get_env(:phoenix_view_assets, :key)
 #
 # You can also configure a third-party app:
 #

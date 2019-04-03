@@ -1,12 +1,13 @@
-defmodule PhoenixCodeSplitting.MixProject do
+defmodule PhoenixViewAssets.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :phoenix_code_splitting,
+      app: :phoenix_view_assets,
       version: "0.1.0",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
+      package: package(),
       deps: deps()
     ]
   end
@@ -15,6 +16,15 @@ defmodule PhoenixCodeSplitting.MixProject do
   def application do
     [
       extra_applications: [:logger]
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["Reio Piller"],
+      licenses: ["MIT"],
+      links: %{github: "https://github.com/coingaming/phoenix_view_assets"},
+      files: ~w(lib mix.exs README.md .formatter.exs)
     ]
   end
 
