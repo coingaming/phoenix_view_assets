@@ -4,7 +4,7 @@ defmodule PhoenixViewAssets.MixProject do
   def project do
     [
       app: :phoenix_view_assets,
-      version: "0.1.1",
+      version: "0.1.2",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
       package: package(),
@@ -33,7 +33,8 @@ defmodule PhoenixViewAssets.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:jason, "~> 1.1"}
+      {:jason, "~> 1.1"},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 end
