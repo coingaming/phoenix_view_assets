@@ -24,7 +24,9 @@ defmodule PhoenixViewAssets.MixProject do
       maintainers: ["Reio Piller"],
       licenses: ["MIT"],
       links: %{github: "https://github.com/coingaming/phoenix_view_assets"},
-      files: ~w(lib mix.exs README.md .formatter.exs)
+      files: ~w(lib mix.exs README.md .formatter.exs),
+      description:
+        "Helps to manage view specific assets in phoenix project. Uses automatic code splitting to avoid over-fetching or downloading assets twice, if they are used in multiple views. Also supports phoenix live reload."
     ]
   end
 
