@@ -9,7 +9,7 @@ Add `phoenix_view_assets` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:phoenix_view_assets, "~> 0.1.0"}
+    {:phoenix_view_assets, "~> 0.1"}
   ]
 end
 ```
