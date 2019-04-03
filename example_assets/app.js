@@ -1,4 +1,4 @@
-// This is common js that all views should have
+// This is common code that all views should have
 
 // We need to import the CSS so that webpack will load it.
 // The MiniCssExtractPlugin is used to separate it out into
