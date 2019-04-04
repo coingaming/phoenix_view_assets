@@ -27,13 +27,13 @@ end
 
 2. Use `MyAppWeb.Assets` in your layout view to generate `scripts` and `styles` functions in compile time.
 ```elixir
-defmodule MyApp.LayoutView do
+defmodule MyAppWeb.LayoutView do
   use MyAppWeb, :view
   use MyAppWeb.Assets
 end
 ```
 
-3. Use `styles` and `scripts` functions from `MyApp.Assets` to add assets to your layout:
+3. Use `styles` and `scripts` functions from `MyAppWeb.Assets` to add assets to your layout:
 ```html
 <head>
   ...
