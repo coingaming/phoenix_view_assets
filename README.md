@@ -38,13 +38,13 @@ end
 <head>
   ...
   <%= for path <- styles(@conn) do %>
-    <link rel="stylesheet" href="#{path}" />
+    <link rel="stylesheet" href="<%= path %>" />
   <% end %>
 </head>
 <body>
   ...
   <%= for path <- scripts(@conn) do %>
-    <script type="text/javascript" src="#{path}" />
+    <script type="text/javascript" src="<%= path %>"></script>
   <% end %>
 </body>
 ```
