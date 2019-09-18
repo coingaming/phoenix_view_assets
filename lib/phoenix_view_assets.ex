@@ -170,6 +170,7 @@ defmodule PhoenixViewAssets do
       Path.extname(file) == extension &&
         (String.contains?(name, "~#{asset_name}~") ||
            String.contains?(name, "~#{asset_name}.") ||
+           String.starts_with?(name, "#{asset_name}~") ||
            String.starts_with?(name, "#{asset_name}."))
     end)
     |> Enum.map(fn {_, file} -> file end)
